@@ -1,0 +1,67 @@
+---SHELLS---
+
+/bin/bash  -  2
+/usr/sbin/nologin  -  26
+/bin/sync  -  1
+/bin/false  -  2
+
+---GROUPS---
+
+root : 0:
+daemon : 1:
+bin : 2:
+sys : 3:
+adm : 4:syslog,gostik
+tty : 5:syslog
+disk : 6:
+lp : 7:
+mail : 8:
+news : 9:
+uucp : 10:
+man : 12:
+proxy : 13:
+kmem : 15:
+dialout : 20:gostik
+fax : 21:
+voice : 22:
+cdrom : 24:gostik
+floppy : 25:gostik
+tape : 26:
+sudo : 27:gostik
+audio : 29:gostik
+dip : 30:gostik
+www-data : 33:
+backup : 34:
+operator : 37:
+list : 38:
+irc : 39:
+src : 40:
+gnats : 41:
+shadow : 42:
+utmp : 43:
+video : 44:gostik
+sasl : 45:
+plugdev : 46:gostik
+staff : 50:
+games : 60:
+users : 100:
+nogroup : 65534:
+systemd-journal : 101:
+systemd-network : 102:
+systemd-resolve : 103:
+systemd-timesync : 104:
+crontab : 105:
+messagebus : 106:
+input : 107:
+kvm : 108:
+render : 109:
+syslog : 110:
+tss : 111:
+uuidd : 112:
+tcpdump : 113:
+ssh : 114:
+landscape : 115:
+admin : 116:
+netdev : 117:gostik
+lxd : 118:
+gostik : 1000:
