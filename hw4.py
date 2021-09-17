@@ -16,7 +16,10 @@
 # -777
 
 
+import re
+
 print('Введите целые неотрицательные числа, разделенные любым не цифровым \
 литералом (пробел, запятая, %, буква и т.д.).\n')
-numbers = input().split()
-print(sum([int(number) for number in numbers if int(number) >= 0]))
+string = input()
+res = sum(list(map(int, re.findall(r'-?\d+', string))))
+print(res)
