@@ -17,7 +17,7 @@ if image.has_exif:
     longitude_list = str(image.gps_longitude).lstrip('(').rstrip(')').split(', ')
     decimal_latitude = float(latitude_list[0]) + float(latitude_list[1])/60 + float(latitude_list[2])/3600
     decimal_longitude = float(longitude_list[0]) + float(longitude_list[1])/60 + float(longitude_list[2])/3600
-    coords = str(decimal_latitude).replace('.', ',') + str('\';')+ str(decimal_longitude).replace('.', ',') + str('\'')
+    coords = f"{str(decimal_latitude).replace('.', ',')}\';{str(decimal_longitude).replace('.', ',')}\'"
 
     with open('coords.txt', 'w') as output_file:
         output_file.write(coords)
