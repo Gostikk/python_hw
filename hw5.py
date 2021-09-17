@@ -14,11 +14,10 @@
 # 6
 
 
-text = input('неотрицательные целые числа, разделенные через пробел: \n').split()
-res = sorted([int(number) for number in text if int(number) >= 0])
-def Find_min(text, iter):
-    if not (min(res) + iter) in res:
-        print(min(res) + iter)
-        exit()
-    Find_min(text, iter+1)
-Find_min(text, 1)
+string = input('неотрицательные целые числа, разделенные через пробел: \n').split()
+numbers = set(map(int, string))
+for i in range(1, max(numbers)):
+    if i not in numbers:
+        print(i)
+    else:
+        print(max(numbers)+1)
