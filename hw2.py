@@ -23,3 +23,8 @@ for word in text:
     if word not in unique:
         unique.append(word)
 print(' '.join(unique))
+
+# Если сохранение порядка не важно:
+# text = input('Введите текст, содержащий любые слова, слоги, числа или их комбинации, разделенные пробелом:\n ').split()
+# mySet = set(text) 
+# print(' '.join(mySet))
