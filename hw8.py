@@ -11,19 +11,38 @@
 # 3.При получении в качестве вводных данных 'cancel' завершает свою работу.
 
 
+import re
+
+
+def myIsDigit(string):
+    if re.search(r'\D', string):
+        return False
+    else:
+        if string:
+            return (ord(string[-1]) - ord('0')) + 10 * myIsDigit(string[:-1])
+        else:
+            return 0
+
+
 def func():
-    text = input('Введите текст: \n')
-    if text.isdigit():
-        if int(text) % 2 == 0:
-            print(int(int(text) / 2))
+
+    string = input("Введите текст: ")
+
+    if string == "cancel":
+        print("Bye!")
+    else:
+        output = myIsDigit(string)
+        if not output:
+            print("Не удалось преобразовать введенный текст в число.")
+            func()
+        elif output % 2 == 0:
+            res = output // 2
+            print(res)
             func()
         else:
-            print(int(text) * 3 + 1)
+            res = output * 3 + 1
+            print(res)
             func()
-    elif text == 'cancel':
-        print('Bye!')
-        exit()
-    else:
-        print('Не удалось преобразовать введенный текст в число.')
-        func()
+
+
 func()
