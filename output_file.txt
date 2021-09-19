@@ -1,0 +1,2 @@
+2 - /bin/bash ; 26 - /usr/sbin/nologin ; 1 - /bin/sync ; 2 - /bin/false ; 
+root: 0 , daemon: 1,111 , bin: 2 , sys: 3 , lp: 7 , mail: 8 , news: 9 , uucp: 10 , man: 6 , proxy: 13 , www-data: 33 , backup: 34 , list: 38 , irc: 39 , gnats: 41 , games: 5 , nogroup: 4,65534,105,109 , systemd-network: 100 , systemd-resolve: 101 , systemd-timesync: 102 , messagebus: 103 , syslog: 104 , tss: 106 , uuidd: 107 , tcpdump: 108 , landscape: 110 , gostik: 1000 , 
